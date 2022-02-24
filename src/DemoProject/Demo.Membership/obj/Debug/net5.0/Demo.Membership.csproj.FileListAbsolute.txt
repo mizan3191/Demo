@@ -1,0 +1,12 @@
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\Demo.Membership.csproj.AssemblyReference.cache
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\Demo.Membership.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\Demo.Membership.AssemblyInfoInputs.cache
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\Demo.Membership.AssemblyInfo.cs
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\Demo.Membership.csproj.CoreCompileInputs.cache
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\bin\Debug\net5.0\Demo.Membership.deps.json
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\bin\Debug\net5.0\Demo.Membership.dll
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\bin\Debug\net5.0\Demo.Membership.pdb
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\Demo.Membership.dll
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\refint\Demo.Membership.dll
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\Demo.Membership.pdb
+D:\ASP.NET\DemoProject\Demo\src\DemoProject\Demo.Membership\obj\Debug\net5.0\ref\Demo.Membership.dll

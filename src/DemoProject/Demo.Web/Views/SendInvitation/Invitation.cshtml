@@ -1,0 +1,103 @@
+﻿@model UserInvitationModel
+@{
+    ViewData["Title"] = "Invite User ";
+}
+
+<header class="mb-3">
+    <a href="#" class="burger-btn d-block d-xl-none">
+        <i class="bi bi-justify fs-3"></i>
+    </a>
+</header>
+
+<div class="page-heading">
+    <!-- Basic Horizontal form layout section start -->
+    <section id="basic-horizontal-layouts">
+        <div class="row match-height">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form form-horizontal needs-validation" novalidate method="Post" asp-controller="SendInvitation"
+                                  asp-action="Invitation" asp-antiforgery="true">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input asp-for="CompanyId" type="hidden">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="form-group has-icon-left">
+                                            <label for="first-name-icon">Employee Name</label>
+                                            <div class="invalid-feedback">Please provide Employee Name.</div>
+                                            <div class="position-relative">
+                                                <input asp-for="FullName" type="text" class="form-control"
+                                                       placeholder="Employee Name"
+                                                       id="first-name-icon" required/>
+                                                <div class="form-control-icon">
+                                                    <i class="bi bi-person"></i>
+                                                </div>
+                                                <div class="invalid-tooltip">
+                                                    Please provide an employee name.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="text-danger" asp-validation-for="FullName"></span>
+                                        </div>
+                                        <div class="form-group has-icon-left">
+                                            <label for="email-id-icon">Employee Email</label>
+                                            <div class="position-relative">
+                                                <input type="email" class="form-control" asp-for="Email"
+                                                       placeholder="Employee Email" id="email-id-icon" required />
+                                                <div class="form-control-icon">
+                                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="invalid-tooltip">
+                                                    Please provide a valid e-mail address.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="text-danger" asp-validation-for="Email"></span>
+                                        </div>
+                                        <div class="col-sm-12 d-flex justify-content-end">
+                                            <button type="submit"
+                                                    class="btn btn-primary me-1 mb-1">
+                                                Send Invitation
+                                            </button>
+                                            <button type="reset"
+                                                    class="btn btn-light-secondary me-1 mb-1">
+                                                Reset
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        (function () {
+            'use strict'
+
+            var forms = document.querySelectorAll('.needs-validation')
+
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit',
+                        function(event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+                        }, false)
+                })
+        })()
+    </script>
+}
