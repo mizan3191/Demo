@@ -53,7 +53,7 @@ namespace Demo.Membership
                 .WithParameter("username", "mizan.cse.green@gmail.com")
                 .WithParameter("password", "Mizan@171028005")
                 .WithParameter("useSSL", true)
-                .WithParameter("from", "Mizan@gmail.com")
+                .WithParameter("from", "Bluebay@gmail.com")
                 .InstancePerLifetimeScope();
 
             base.Load(builder);
