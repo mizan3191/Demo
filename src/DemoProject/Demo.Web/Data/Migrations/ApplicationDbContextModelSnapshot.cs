@@ -39,9 +39,6 @@ namespace Demo.Web.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("FullName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -118,22 +115,22 @@ namespace Demo.Web.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c920988a-47c2-49a5-a14a-6f7163324301"),
-                            ConcurrencyStamp = "a4d9d789-2b78-4218-9f1a-4bd3c29412a4",
+                            Id = new Guid("0504e664-6652-4a39-a0ed-ea15e09be6b2"),
+                            ConcurrencyStamp = "d4baa70b-dd02-47ca-bae8-a9bc8535e056",
                             Name = "SuperAdmin",
                             NormalizedName = "SUPERADMIN"
                         },
                         new
                         {
-                            Id = new Guid("87d4fe2e-4f6a-43da-acf7-23dfbcb7d411"),
-                            ConcurrencyStamp = "e76a9d19-05b2-4f23-a3b0-cb6a70bfdde3",
+                            Id = new Guid("149ff9a5-38cb-41cc-93e4-f692a591eec6"),
+                            ConcurrencyStamp = "8e430915-2a43-4af8-b107-17d8bc1200e9",
                             Name = "Manager",
                             NormalizedName = "MANAGER"
                         },
                         new
                         {
-                            Id = new Guid("3d560c91-87ba-49c9-9b47-1a0036c27291"),
-                            ConcurrencyStamp = "d3952bca-e96a-4afd-99eb-f7a7d1d37d24",
+                            Id = new Guid("820b91a6-85d4-463b-9733-98551e83a950"),
+                            ConcurrencyStamp = "fb1a142a-da13-4351-b923-103bef424c03",
                             Name = "User",
                             NormalizedName = "USER"
                         });

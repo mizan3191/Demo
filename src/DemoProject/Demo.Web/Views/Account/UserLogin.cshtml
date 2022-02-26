@@ -1,0 +1,42 @@
+﻿@model UserLoginModel
+
+@{
+    Layout = "_Layout2";
+
+    ViewData["Title"] = "User Login";
+}
+
+
+
+<div class="card">
+    <div class="card-body login-card-body">
+        <h3 class="login-box-msg">Sign In</h3>
+
+        <form asp-action="UserLogin" asp-antiforgery="true" asp-controller="Account" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="input-group mb-3">
+                <input asp-for="InvitationCode" class="form-control" placeholder="InvitationCode">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4">
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                </div>
+            </div>
+        </form>
+
+        <p class="mb-0">
+            <a asp-action="Login" asp-controller="Account" class="text-center">Admin Login</a>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+}

@@ -7,6 +7,7 @@ using Demo.Membership.Entities;
 using Demo.Membership.Seeds;
 using Demo.Membership.Services;
 using Demo.Web.Data;
+using Demo.Web.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -127,6 +128,12 @@ namespace Demo.Web
 
             services.AddAuthorization(options =>
             {
+                options.AddPolicy("CommonPermission", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.Requirements.Add(new CommonPermissionRequirement());
+                });
+
                 options.AddPolicy("SuperAdmin", policy =>
                 {
                     policy.RequireAuthenticatedUser();
@@ -144,14 +151,15 @@ namespace Demo.Web
                     policy.RequireAuthenticatedUser();
                     policy.Requirements.Add(new UserRequirement());
                 });
-
             });
 
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp"));
             services.AddSingleton<SuperAdminDataSeed>();
             services.AddSingleton<IAuthorizationHandler, UserRequirementHandler>();
             services.AddSingleton<IAuthorizationHandler, ManagerRequirementHandler>();
             services.AddSingleton<IAuthorizationHandler,SuperAdminRequirementHandler>();
-
+            services.AddSingleton<IAuthorizationHandler, CommonPermissionRequirementHandler>();
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
             services.AddRazorPages();

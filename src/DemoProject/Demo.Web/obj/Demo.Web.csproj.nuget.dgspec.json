@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Web\\Demo.Web.csproj": {}
+    "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Web\\Demo.Web.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj": {
+    "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj",
+        "projectUniqueName": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj",
         "projectName": "Demo.Membership",
-        "projectPath": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj",
+        "projectPath": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj",
         "packagesPath": "C:\\Users\\MR. Rassel\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\obj\\",
+        "outputPath": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MR. Rassel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,6 +56,14 @@
               "target": "Package",
               "version": "[5.0.4, )"
             },
+            "DevSkill.Http": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.12, )"
@@ -92,14 +100,14 @@
         }
       }
     },
-    "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Web\\Demo.Web.csproj": {
+    "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Web\\Demo.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Web\\Demo.Web.csproj",
+        "projectUniqueName": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Web\\Demo.Web.csproj",
         "projectName": "Demo.Web",
-        "projectPath": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Web\\Demo.Web.csproj",
+        "projectPath": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Web\\Demo.Web.csproj",
         "packagesPath": "C:\\Users\\MR. Rassel\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Web\\obj\\",
+        "outputPath": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MR. Rassel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,8 +124,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj": {
-                "projectPath": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj"
+              "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj": {
+                "projectPath": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj"
               }
             }
           }
@@ -132,6 +140,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Autofac.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.2.0, )"

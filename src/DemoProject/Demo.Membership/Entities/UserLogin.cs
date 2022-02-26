@@ -7,6 +7,5 @@ namespace Demo.Membership.Entities
     public class UserLogin
         : IdentityUserLogin<Guid>
     {
-
     }
 }

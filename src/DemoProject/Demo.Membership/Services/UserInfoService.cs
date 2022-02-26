@@ -1,10 +1,7 @@
 ﻿using Demo.Membership.BusinessObjects;
 using Demo.Membership.UnitOfWorks;
-using AutoMapper;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Demo.Membership.Services
@@ -17,6 +14,21 @@ namespace Demo.Membership.Services
         {
             _unitOfWork = unitOfWork;
 
+        }
+
+        public async Task<UserInfo> GetEmailAsync(string invitationCode)
+        {
+            var entity = (await _unitOfWork.UserInfoRepository.GetAsync(c => c.InvitationCode == invitationCode, null)).FirstOrDefault();
+
+            if (entity == null)
+                throw new Exception("User is doesn't exist");
+
+            return new UserInfo()
+            {
+                Email = entity.Email,
+                InvitationCode = invitationCode,
+                Id = entity.Id
+            };
         }
     }
 }

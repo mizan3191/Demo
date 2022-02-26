@@ -8,9 +8,11 @@ namespace Demo.Web
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<LoginModel>().AsSelf();
-            builder.RegisterType<RegisterModel>().AsSelf();
-            builder.RegisterType<UserInvitationModel>().AsSelf();
-
+            builder.RegisterType<InvitationModel>().AsSelf();
+            builder.RegisterType<UserLoginModel>().AsSelf();
+            builder.RegisterType<ProductTableModel>().AsSelf();
+            builder.RegisterType<ProductEditModel>().AsSelf();
+            builder.RegisterType<ProductCreateModel>().AsSelf();
 
             base.Load(builder);
         }

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Demo.Membership.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 

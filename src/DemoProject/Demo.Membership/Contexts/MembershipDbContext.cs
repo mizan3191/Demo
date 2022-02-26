@@ -25,14 +25,10 @@ namespace Demo.Membership.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ApplicationUser>()
-                .ToTable("AspNetUsers", x => x.ExcludeFromMigrations())
-                .HasMany<UserInfo>()
-                .WithOne(x => x.SuperAdmin);
-
             base.OnModelCreating(modelBuilder);
         }
 
         DbSet<UserInfo> UserInfos { get; set; }
+        DbSet<Product> Products { get; set; }
     }
 }

@@ -9,7 +9,6 @@ namespace Demo.Membership.Repositories
         public UserInfoRepository(IMembershipDbContext dbContext)
             :base((MembershipDbContext)dbContext)
         {
-
         }
     }
 }

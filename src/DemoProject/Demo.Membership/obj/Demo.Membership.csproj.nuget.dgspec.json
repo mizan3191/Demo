@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj": {}
+    "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj": {}
   },
   "projects": {
-    "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj": {
+    "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj",
+        "projectUniqueName": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj",
         "projectName": "Demo.Membership",
-        "projectPath": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj",
+        "projectPath": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\Demo.Membership.csproj",
         "packagesPath": "C:\\Users\\MR. Rassel\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP.NET\\DemoProject\\Demo\\src\\DemoProject\\Demo.Membership\\obj\\",
+        "outputPath": "D:\\ASP.NET\\DemoProject\\New folder (2)\\Demo\\src\\DemoProject\\Demo.Membership\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MR. Rassel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,6 +55,14 @@
             "DevSkill.Data": {
               "target": "Package",
               "version": "[5.0.4, )"
+            },
+            "DevSkill.Http": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.15.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",

@@ -376,3 +376,72 @@ System.Security.Cryptography.CryptographicException: The payload was invalid.
    at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
    at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
    at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2022-02-24 17:16:59.812 -08:00 [INF] Application Starting up
+2022-02-24 17:52:20.922 -08:00 [INF] Application Starting up
+2022-02-24 17:56:51.241 -08:00 [FTL] Application startup exception
+System.AggregateException: One or more errors occurred. (Sequence contains more than one element.)
+ ---> System.InvalidOperationException: Sequence contains more than one element.
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByEmailAsync(String email)
+   at Demo.Membership.Seeds.SuperAdminDataSeed.SeedUserAsync() in D:\ASP.NET\DemoProject\New folder (2)\Demo\src\DemoProject\Demo.Membership\Seeds\SuperAdminDataSeed.cs:line 33
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Demo.Web.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, SuperAdminDataSeed superAdminDataSeed) in D:\ASP.NET\DemoProject\New folder (2)\Demo\src\DemoProject\Demo.Web\Startup.cs:line 193
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.BrowserLink.Net.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2022-02-24 17:56:51.509 -08:00 [FTL] Application start-up failed
+System.AggregateException: One or more errors occurred. (Sequence contains more than one element.)
+ ---> System.InvalidOperationException: Sequence contains more than one element.
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByEmailAsync(String email)
+   at Demo.Membership.Seeds.SuperAdminDataSeed.SeedUserAsync() in D:\ASP.NET\DemoProject\New folder (2)\Demo\src\DemoProject\Demo.Membership\Seeds\SuperAdminDataSeed.cs:line 33
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Demo.Web.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env, SuperAdminDataSeed superAdminDataSeed) in D:\ASP.NET\DemoProject\New folder (2)\Demo\src\DemoProject\Demo.Web\Startup.cs:line 193
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.BrowserLink.Net.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Demo.Web.Program.Main(String[] args) in D:\ASP.NET\DemoProject\New folder (2)\Demo\src\DemoProject\Demo.Web\Program.cs:line 33
+2022-02-24 17:58:46.829 -08:00 [INF] Application Starting up
+2022-02-24 17:58:57.348 -08:00 [INF] User logged in.
+2022-02-24 18:01:12.544 -08:00 [INF] Application Starting up
+2022-02-24 18:02:32.634 -08:00 [INF] Application Starting up
+2022-02-24 18:09:10.813 -08:00 [INF] Application Starting up
+2022-02-24 18:14:59.802 -08:00 [INF] Application Starting up
+2022-02-24 18:16:43.958 -08:00 [INF] Application Starting up
+2022-02-24 18:18:29.723 -08:00 [INF] Application Starting up
+2022-02-24 18:18:36.709 -08:00 [INF] User logged out.
+2022-02-24 18:20:18.636 -08:00 [INF] Application Starting up
+2022-02-24 18:23:25.335 -08:00 [INF] Application Starting up
+2022-02-24 18:23:38.523 -08:00 [WRN] Invalid password for user.
+2022-02-24 18:23:38.528 -08:00 [WRN] User failed to provide the correct password.
+2022-02-24 18:25:46.949 -08:00 [WRN] Invalid password for user.
+2022-02-24 18:25:46.950 -08:00 [WRN] User failed to provide the correct password.
+2022-02-24 18:29:01.928 -08:00 [INF] Application Starting up
+2022-02-24 18:29:30.957 -08:00 [INF] Application Starting up
+2022-02-24 18:30:03.891 -08:00 [INF] User logged in.

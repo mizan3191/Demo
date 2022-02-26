@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Demo.Web.Data.Migrations
 {
-    public partial class UserTable : Migration
+    public partial class AuthTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -57,12 +57,6 @@ namespace Demo.Web.Data.Migrations
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "nvarchar(450)");
-
-            migrationBuilder.AddColumn<string>(
-                name: "FullName",
-                table: "AspNetUsers",
-                type: "nvarchar(max)",
-                nullable: true);
 
             migrationBuilder.AlterColumn<Guid>(
                 name: "RoleId",
@@ -133,18 +127,17 @@ namespace Demo.Web.Data.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { new Guid("c920988a-47c2-49a5-a14a-6f7163324301"), "a4d9d789-2b78-4218-9f1a-4bd3c29412a4", "SuperAdmin", "SUPERADMIN" });
+                values: new object[] { new Guid("0504e664-6652-4a39-a0ed-ea15e09be6b2"), "d4baa70b-dd02-47ca-bae8-a9bc8535e056", "SuperAdmin", "SUPERADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { new Guid("87d4fe2e-4f6a-43da-acf7-23dfbcb7d411"), "e76a9d19-05b2-4f23-a3b0-cb6a70bfdde3", "Manager", "MANAGER" });
+                values: new object[] { new Guid("149ff9a5-38cb-41cc-93e4-f692a591eec6"), "8e430915-2a43-4af8-b107-17d8bc1200e9", "Manager", "MANAGER" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { new Guid("3d560c91-87ba-49c9-9b47-1a0036c27291"), "d3952bca-e96a-4afd-99eb-f7a7d1d37d24", "User", "USER" });
-
+                values: new object[] { new Guid("820b91a6-85d4-463b-9733-98551e83a950"), "fb1a142a-da13-4351-b923-103bef424c03", "User", "USER" });
 
             migrationBuilder.AddPrimaryKey(name: "PK_AspNetRoles", table: "AspNetRoles", column: "Id");
             migrationBuilder.AddPrimaryKey(name: "PK_AspNetUserRoles", table: "AspNetUserRoles", columns: new[] { "UserId", "RoleId" });
@@ -162,6 +155,7 @@ namespace Demo.Web.Data.Migrations
                 table: "AspNetUserRoles", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
             migrationBuilder.AddForeignKey(name: "FK_AspNetUserTokens_AspNetUsers_UserId",
                 table: "AspNetUserTokens", column: "UserId", principalTable: "AspNetUsers", principalColumn: "Id");
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -169,21 +163,17 @@ namespace Demo.Web.Data.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: new Guid("3d560c91-87ba-49c9-9b47-1a0036c27291"));
+                keyValue: new Guid("0504e664-6652-4a39-a0ed-ea15e09be6b2"));
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: new Guid("87d4fe2e-4f6a-43da-acf7-23dfbcb7d411"));
+                keyValue: new Guid("149ff9a5-38cb-41cc-93e4-f692a591eec6"));
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: new Guid("c920988a-47c2-49a5-a14a-6f7163324301"));
-
-            migrationBuilder.DropColumn(
-                name: "FullName",
-                table: "AspNetUsers");
+                keyValue: new Guid("820b91a6-85d4-463b-9733-98551e83a950"));
 
             migrationBuilder.AlterColumn<string>(
                 name: "Name",

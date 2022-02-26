@@ -42,6 +42,19 @@ namespace Demo.Membership
             builder.RegisterType<UserInfoRepository>().As<IUserInfoRepository>().InstancePerLifetimeScope();
             builder.RegisterType<UserInfoService>().As<IUserInfoService>().InstancePerLifetimeScope();
             builder.RegisterType<MembershipUnitOfWork>().As<IMembershipUnitOfWork>().InstancePerLifetimeScope();
+            builder.RegisterType<InvitationCodeGeneratorService>().As<IInvitationCodeGeneratorService>().InstancePerLifetimeScope();
+            builder.RegisterType<InvitationRepository>().As<IInvitationRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<ProductRepository>().As<IProductRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<ProductService>().As<IProductService>().InstancePerLifetimeScope();
+
+            builder.RegisterType<EmailService>().As<IEmailService>()
+                .WithParameter("host", "smtp.gmail.com")
+                .WithParameter("port", 465)
+                .WithParameter("username", "mizan.cse.green@gmail.com")
+                .WithParameter("password", "Mizan@171028005")
+                .WithParameter("useSSL", true)
+                .WithParameter("from", "Mizan@gmail.com")
+                .InstancePerLifetimeScope();
 
             base.Load(builder);
         }
