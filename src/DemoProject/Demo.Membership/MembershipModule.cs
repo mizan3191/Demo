@@ -48,12 +48,12 @@ namespace Demo.Membership
             builder.RegisterType<ProductService>().As<IProductService>().InstancePerLifetimeScope();
 
             builder.RegisterType<EmailService>().As<IEmailService>()
-                .WithParameter("host", "smtp.gmail.com")
-                .WithParameter("port", 465)
-                .WithParameter("username", "mizan.cse.green@gmail.com")
-                .WithParameter("password", "Mizan@171028005")
+                .WithParameter("host", "")
+                .WithParameter("port", )
+                .WithParameter("username", "")
+                .WithParameter("password", "")
                 .WithParameter("useSSL", true)
-                .WithParameter("from", "Bluebay@gmail.com")
+                .WithParameter("from", "")
                 .InstancePerLifetimeScope();
 
             base.Load(builder);
